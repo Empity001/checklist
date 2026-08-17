@@ -61,12 +61,12 @@ const BAMBOO = [
 const STONE_FAMILIES = [
   {es:'Piedra', en:'Stone', forms:['block','slab','stairs']},
   {es:'Piedra Lisa', en:'Smooth Stone', forms:['block','slab']},
-  {es:'Roca', en:'Cobblestone', forms:['block','slab','stairs','wall']},
-  {es:'Roca Musgosa', en:'Mossy Cobblestone', forms:['block','slab','stairs','wall']},
+  {es:'Adoquín', en:'Cobblestone', forms:['block','slab','stairs','wall']},
+  {es:'Adoquín Musgoso', en:'Mossy Cobblestone', forms:['block','slab','stairs','wall']},
   {es:'Ladrillos de Piedra', en:'Stone Bricks', forms:['block','slab','stairs','wall']},
   {es:'Ladrillos de Piedra Agrietados', en:'Cracked Stone Bricks', forms:['block']},
   {es:'Ladrillos de Piedra Musgosos', en:'Mossy Stone Bricks', forms:['block','slab','stairs','wall']},
-  {es:'Ladrillos de Piedra Cincelados', en:'Chiseled Stone Bricks', forms:['block']},
+  {es:'Ladrillos de Piedra Tallados', en:'Chiseled Stone Bricks', forms:['block']},
   {es:'Andesita', en:'Andesite', forms:['block','slab','stairs','wall']},
   {es:'Andesita Pulida', en:'Polished Andesite', forms:['block','slab','stairs']},
   {es:'Diorita', en:'Diorite', forms:['block','slab','stairs','wall']},
@@ -74,18 +74,18 @@ const STONE_FAMILIES = [
   {es:'Granito', en:'Granite', forms:['block','slab','stairs','wall']},
   {es:'Granito Pulido', en:'Polished Granite', forms:['block','slab','stairs']},
   {es:'Pizarra Profunda', en:'Deepslate', forms:['block']},
-  {es:'Pizarra Profunda Rocosa', en:'Cobbled Deepslate', forms:['block','slab','stairs','wall']},
+  {es:'Adoquín de Pizarra Profunda', en:'Cobbled Deepslate', forms:['block','slab','stairs','wall']},
   {es:'Ladrillos de Pizarra Profunda', en:'Deepslate Bricks', forms:['block','slab','stairs','wall']},
-  {es:'Baldosas de Pizarra Profunda', en:'Deepslate Tiles', forms:['block','slab','stairs','wall']},
+  {es:'Losetas de Pizarra Profunda', en:'Deepslate Tiles', forms:['block','slab','stairs','wall']},
   {es:'Pizarra Profunda Pulida', en:'Polished Deepslate', forms:['block','slab','stairs','wall']},
   {es:'Arenisca', en:'Sandstone', forms:['block','slab','stairs']},
   {es:'Arenisca Cortada', en:'Cut Sandstone', forms:['block']},
   {es:'Arenisca Lisa', en:'Smooth Sandstone', forms:['block','slab','stairs']},
-  {es:'Arenisca Cincelada', en:'Chiseled Sandstone', forms:['block']},
+  {es:'Arenisca Tallada', en:'Chiseled Sandstone', forms:['block']},
   {es:'Arenisca Roja', en:'Red Sandstone', forms:['block','slab','stairs']},
   {es:'Arenisca Roja Cortada', en:'Cut Red Sandstone', forms:['block']},
   {es:'Arenisca Roja Lisa', en:'Smooth Red Sandstone', forms:['block','slab','stairs']},
-  {es:'Arenisca Roja Cincelada', en:'Chiseled Red Sandstone', forms:['block']},
+  {es:'Arenisca Roja Tallada', en:'Chiseled Red Sandstone', forms:['block']},
   {es:'Calcita', en:'Calcite', forms:['block']},
   {es:'Toba', en:'Tuff', forms:['block','slab','stairs','wall']},
   {es:'Toba Pulida', en:'Polished Tuff', forms:['block','slab','stairs','wall']},
@@ -132,11 +132,11 @@ const COPPER_SHAPES = [
   {es:'Escalera de Cobre Cortado', en:'Cut Copper Stairs'},
   {es:'Puerta de Cobre', en:'Copper Door'},
   {es:'Trampilla de Cobre', en:'Copper Trapdoor'},
-  {es:'Rejilla de Cobre', en:'Copper Grate'},
-  {es:'Lámpara de Cobre', en:'Copper Bulb'},
+  {es:'Reja de Cobre', en:'Copper Grate'},
+  {es:'Bombilla de Cobre', en:'Copper Bulb'},
   // Nuevos en 1.21.9 "La Era del Cobre"
   {es:'Cofre de Cobre', en:'Copper Chest'},
-  {es:'Estatua de Gólem de Cobre', en:'Copper Golem Statue'},
+  {es:'Estatua de Golem de Cobre', en:'Copper Golem Statue'},
   {es:'Barrotes de Cobre', en:'Copper Bars'},
   {es:'Cadena de Cobre', en:'Copper Chain'},
   {es:'Farol de Cobre', en:'Copper Lantern'},
@@ -456,7 +456,7 @@ const NETHER_STONE_FAMILIES = [
   {es:'Basalto Liso', en:'Smooth Basalt', forms:['block']},
   {es:'Blackstone', en:'Blackstone', forms:['block','slab','stairs','wall']},
   {es:'Blackstone Pulido', en:'Polished Blackstone', forms:['block','slab','stairs','wall']},
-  {es:'Blackstone Pulido Cincelado', en:'Chiseled Polished Blackstone', forms:['block']},
+  {es:'Blackstone Pulido Tallado', en:'Chiseled Polished Blackstone', forms:['block']},
   {es:'Ladrillos de Blackstone Pulido', en:'Polished Blackstone Bricks', forms:['block','slab','stairs','wall']},
   {es:'Ladrillos de Blackstone Pulido Agrietados', en:'Cracked Polished Blackstone Bricks', forms:['block']},
   {es:'Blackstone Dorado', en:'Gilded Blackstone', forms:['block']},
@@ -483,11 +483,11 @@ const NETHER_MISC_BLOCKS = [
 // --- Minerales y metales del Nether ---
 const NETHER_MINERALES = [
   ['Mena de Cuarzo del Nether','Nether Quartz Ore',64],['Cuarzo del Nether','Nether Quartz',64],
-  ['Bloque de Cuarzo','Block of Quartz',64],['Bloque de Cuarzo Cincelado','Chiseled Quartz Block',64],
+  ['Bloque de Cuarzo','Block of Quartz',64],['Bloque de Cuarzo Tallado','Chiseled Quartz Block',64],
   ['Pilar de Cuarzo','Quartz Pillar',64],
-  ['Bloque de Cuarzo Liso','Smooth Quartz Block',64],['Ladrillos de Cuarzo','Quartz Bricks',64],
+  ['Cuarzo Suave (Bloque)','Smooth Quartz Block',64],['Ladrillos de Cuarzo','Quartz Bricks',64],
   ['Losa de Cuarzo','Quartz Slab',64],['Escalera de Cuarzo','Quartz Stairs',64],
-  ['Losa de Cuarzo Liso','Smooth Quartz Slab',64],['Escalera de Cuarzo Liso','Smooth Quartz Stairs',64],
+  ['Losa de Cuarzo Suave','Smooth Quartz Slab',64],['Escalera de Cuarzo Suave','Smooth Quartz Stairs',64],
   ['Mena de Oro del Nether','Nether Gold Ore',64],['Pepita de Oro','Gold Nugget',64],
   ['Escombros Antiguos','Ancient Debris',64],['Escoria de Netherita','Netherite Scrap',64],
   ['Lingote de Netherita','Netherite Ingot',64],['Bloque de Netherita','Netherite Block',64],
@@ -1032,11 +1032,10 @@ function crossLoadFromStorage(){
   }catch(e){}
 }
 
-function refreshItemsDatalist(){
+function getAllItemNames(){
   const names = new Set();
   Object.values(LABELS_BY_ID).forEach(o=>names.add(LANG==='en' ? o.en : o.es));
-  const sorted = [...names].sort((a,b)=>a.localeCompare(b));
-  document.getElementById('crossItemsList').innerHTML = sorted.map(n=>`<option value="${escAttr(n)}"></option>`).join('');
+  return [...names].sort((a,b)=>a.localeCompare(b));
 }
 
 function armGroups(arm){ return CROSS_LAYOUT[arm].A[0].length / GROUP_SIZE; }
@@ -1068,7 +1067,7 @@ function removeCrossGroup(arm){
     });
   });
   if(selectedSlot && selectedSlot.arm===arm && selectedSlot.idx >= CROSS_LAYOUT[arm].A[0].length){
-    closeCrossEditor();
+    closeItemPicker();
   }
   crossSave();
   renderCross();
@@ -1147,53 +1146,54 @@ function renderCross(){
   `;
 }
 
-function updateCrossEditorPreview(){
-  const preview = document.getElementById('crossEditorPreview');
-  const input = document.getElementById('crossEditorInput');
-  if(!preview || !input) return;
-  const icon = iconDataUriForLabel(input.value.trim());
-  if(icon){
-    preview.src = icon;
-    preview.classList.add('shown');
-  }else{
-    preview.classList.remove('shown');
-    preview.removeAttribute('src');
+function renderItemPickerGrid(filter){
+  const grid = document.getElementById('itemPickerGrid');
+  const names = getAllItemNames();
+  const f = (filter || '').trim().toLowerCase();
+  const filtered = f ? names.filter(n => n.toLowerCase().includes(f)) : names;
+  if(!filtered.length){
+    grid.innerHTML = `<div class="item-picker-empty">${LANG==='en' ? 'No matches' : 'Sin resultados'}</div>`;
+    return;
   }
+  const currentVal = selectedSlot ? CROSS_LAYOUT[selectedSlot.arm][selectedSlot.side][selectedSlot.depth][selectedSlot.idx] : '';
+  grid.innerHTML = filtered.map(n => {
+    const icon = iconDataUriForLabel(n);
+    const isSel = n === currentVal;
+    const inner = icon ? `<img src="${icon}" alt="">` : `<div class="ipi-noicon"></div>`;
+    return `<button type="button" class="item-picker-item${isSel ? ' selected' : ''}" data-value="${escAttr(n)}">${inner}<span>${n}</span></button>`;
+  }).join('');
 }
 
-function openCrossEditor(arm, side, depth, idx){
+function openItemPicker(arm, side, depth, idx){
   selectedSlot = {arm, side, depth, idx};
   renderCross();
-  const editor = document.getElementById('crossEditor');
-  const label = document.getElementById('crossEditorLabel');
-  const input = document.getElementById('crossEditorInput');
   const armLabel = ARM_META[arm][LANG];
   const sideLabel = SIDE_META[arm][side][LANG];
   const depthLabel = DEPTH_META[depth][LANG];
-  label.textContent = (LANG==='en' ? 'Editing' : 'Editando') + `: ${armLabel} · ${sideLabel} · ${depthLabel} · #${idx+1}`;
-  input.value = CROSS_LAYOUT[arm][side][depth][idx] || '';
-  editor.classList.add('active');
-  updateCrossEditorPreview();
-  input.focus();
-  input.select();
+  const title = (LANG==='en' ? 'Choose item' : 'Elige un ítem') + `: ${armLabel} · ${sideLabel} · ${depthLabel} · #${idx+1}`;
+  document.getElementById('itemPickerTitle').textContent = title;
+  const search = document.getElementById('itemPickerSearch');
+  search.value = '';
+  renderItemPickerGrid('');
+  document.getElementById('itemPickerOverlay').classList.add('active');
+  search.focus();
 }
-function closeCrossEditor(){
+function closeItemPicker(){
   selectedSlot = null;
-  document.getElementById('crossEditor').classList.remove('active');
+  document.getElementById('itemPickerOverlay').classList.remove('active');
   renderCross();
 }
-function commitCrossEditor(){
+function selectItemForSlot(value){
   if(!selectedSlot) return;
-  const val = document.getElementById('crossEditorInput').value.trim();
-  CROSS_LAYOUT[selectedSlot.arm][selectedSlot.side][selectedSlot.depth][selectedSlot.idx] = val;
+  CROSS_LAYOUT[selectedSlot.arm][selectedSlot.side][selectedSlot.depth][selectedSlot.idx] = value;
   crossSave();
-  closeCrossEditor();
+  closeItemPicker();
 }
-function clearCrossEditor(){
+function clearItemForSlot(){
   if(!selectedSlot) return;
   CROSS_LAYOUT[selectedSlot.arm][selectedSlot.side][selectedSlot.depth][selectedSlot.idx] = '';
   crossSave();
-  closeCrossEditor();
+  closeItemPicker();
 }
 
 document.getElementById('crossGrid').addEventListener('click', e=>{
@@ -1203,17 +1203,25 @@ document.getElementById('crossGrid').addEventListener('click', e=>{
   const rmBtn = e.target.closest('[data-arm-remove]');
   if(rmBtn){ removeCrossGroup(rmBtn.dataset.armRemove); return; }
   const slot = e.target.closest('.cross-slot');
-  if(slot){ openCrossEditor(slot.dataset.arm, slot.dataset.side, parseInt(slot.dataset.depth,10), parseInt(slot.dataset.idx,10)); }
+  if(slot){ openItemPicker(slot.dataset.arm, slot.dataset.side, parseInt(slot.dataset.depth,10), parseInt(slot.dataset.idx,10)); }
 });
 
-document.getElementById('crossSaveBtn').addEventListener('click', commitCrossEditor);
-document.getElementById('crossClearBtn').addEventListener('click', clearCrossEditor);
-document.getElementById('crossCancelBtn').addEventListener('click', closeCrossEditor);
-document.getElementById('crossEditorInput').addEventListener('keydown', e=>{
-  if(e.key==='Enter'){ e.preventDefault(); commitCrossEditor(); }
-  else if(e.key==='Escape'){ e.preventDefault(); closeCrossEditor(); }
+document.getElementById('itemPickerGrid').addEventListener('click', e=>{
+  const btn = e.target.closest('.item-picker-item');
+  if(btn) selectItemForSlot(btn.dataset.value);
 });
-document.getElementById('crossEditorInput').addEventListener('input', updateCrossEditorPreview);
+document.getElementById('itemPickerSearch').addEventListener('input', e=>{
+  renderItemPickerGrid(e.target.value);
+});
+document.getElementById('itemPickerClearBtn').addEventListener('click', clearItemForSlot);
+document.getElementById('itemPickerCancelBtn').addEventListener('click', closeItemPicker);
+document.getElementById('itemPickerCloseBtn').addEventListener('click', closeItemPicker);
+document.getElementById('itemPickerOverlay').addEventListener('click', e=>{
+  if(e.target.id === 'itemPickerOverlay') closeItemPicker();
+});
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape' && document.getElementById('itemPickerOverlay').classList.contains('active')) closeItemPicker();
+});
 
 document.getElementById('crossResetBtn').addEventListener('click', ()=>{
   const anyData = ['N','S','E','W'].some(arm=>
@@ -1224,7 +1232,7 @@ document.getElementById('crossResetBtn').addEventListener('click', ()=>{
     if(!confirm(msg)) return;
   }
   CROSS_LAYOUT = freshLayout();
-  closeCrossEditor();
+  closeItemPicker();
   crossSave();
   renderCross();
 });
@@ -1433,10 +1441,9 @@ function applyLanguage(){
   document.getElementById('langEs').classList.toggle('active-lang', LANG==='es');
   document.getElementById('langEn').classList.toggle('active-lang', LANG==='en');
 
-  document.getElementById('crossEditorInput').placeholder = LANG==='en' ? 'Item name…' : 'Nombre del ítem…';
-  refreshItemsDatalist();
+  document.getElementById('itemPickerSearch').placeholder = LANG==='en' ? 'Filter…' : 'Filtrar…';
   renderCross();
-  if(selectedSlot){ openCrossEditor(selectedSlot.arm, selectedSlot.side, selectedSlot.depth, selectedSlot.idx); }
+  if(selectedSlot){ openItemPicker(selectedSlot.arm, selectedSlot.side, selectedSlot.depth, selectedSlot.idx); }
 
   updateCounts();
   runSearch();
@@ -1505,7 +1512,7 @@ document.getElementById('loadInput').addEventListener('change', e=>{
           if(isValidArmData(data.layout[arm])) CROSS_LAYOUT[arm] = data.layout[arm];
           else if(isLegacyArmData(data.layout[arm])) CROSS_LAYOUT[arm] = migrateLegacyArm(data.layout[arm]);
         });
-        closeCrossEditor();
+        closeItemPicker();
         crossSave();
         renderCross();
       }

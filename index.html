@@ -53,19 +53,24 @@
   </div>
   <div class="autosave-note" id="autosaveNote"></div>
 
-  <div class="dim-legend hidden" id="dimLegend"></div>
+  <div class="dim-legend" id="dimLegend"></div>
 
   <div id="sections"></div>
 
   <div id="layoutPanel">
-    <div class="cross-editor" id="crossEditor">
-      <span class="cross-editor-label" id="crossEditorLabel">Editando</span>
-      <img class="cross-editor-preview" id="crossEditorPreview" alt="">
-      <input type="text" id="crossEditorInput" list="crossItemsList" placeholder="Nombre del ítem…">
-      <datalist id="crossItemsList"></datalist>
-      <button type="button" class="mini-btn wide" id="crossSaveBtn" data-es="Guardar" data-en="Save">Guardar</button>
-      <button type="button" class="mini-btn wide" id="crossClearBtn" data-es="Borrar" data-en="Clear">Borrar</button>
-      <button type="button" class="mini-btn wide" id="crossCancelBtn" data-es="Cancelar" data-en="Cancel">Cancelar</button>
+    <div class="item-picker-overlay" id="itemPickerOverlay">
+      <div class="item-picker-modal" id="itemPickerModal">
+        <div class="item-picker-header">
+          <span class="item-picker-title" id="itemPickerTitle">Elige un ítem</span>
+          <button type="button" class="item-picker-close" id="itemPickerCloseBtn" title="Cerrar">✕</button>
+        </div>
+        <input type="text" class="item-picker-search" id="itemPickerSearch" placeholder="Filtrar…" data-es-placeholder="Filtrar…" data-en-placeholder="Filter…">
+        <div class="item-picker-grid" id="itemPickerGrid"></div>
+        <div class="item-picker-footer">
+          <button type="button" class="mini-btn wide" id="itemPickerClearBtn" data-es="🗑️ Vaciar slot" data-en="🗑️ Clear slot">🗑️ Vaciar slot</button>
+          <button type="button" class="mini-btn wide" id="itemPickerCancelBtn" data-es="Cancelar" data-en="Cancel">Cancelar</button>
+        </div>
+      </div>
     </div>
 
     <div class="cross-toolbar">
