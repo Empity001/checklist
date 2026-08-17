@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CHECKLIST // OVERWORLD · NETHER · END</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hud-top">
+    <div class="hud-title">
+      <span id="dimTitle">CHECKLIST // OVERWORLD SURVIVAL</span>
+      <span class="lang-switch" id="langSwitch">
+        <button type="button" class="lang-btn active-lang" id="langEs" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" id="langEn" data-lang="en">EN</button>
+      </span>
+      <span class="sub" id="dateStamp"></span>
+    </div>
+    <div class="xp-outer"><div class="xp-fill" id="xpFill"></div></div>
+    <div class="xp-count" id="xpCount">0 / 0 recolectados (todas las dimensiones)</div>
+  </div>
+
+  <div class="mode-tabs" id="modeTabs">
+    <button type="button" class="mode-tab active-mode" data-mode="checklist">📋 <span data-es="CHECKLIST" data-en="CHECKLIST">CHECKLIST</span></button>
+    <button type="button" class="mode-tab" data-mode="layout">🗺️ <span data-es="SALA DE ALMACÉN" data-en="STORAGE ROOM">SALA DE ALMACÉN</span></button>
+  </div>
+
+  <div class="dim-tabs" id="dimTabs"></div>
+
+  <div class="search-wrap" id="checklistOnly1">
+    <input class="search-bar" id="search" type="text" placeholder="🔍 Buscar ítems… (ej: cobre, roble, escalera, cofre)">
+    <button type="button" class="search-clear" id="searchClear" title="Limpiar búsqueda">✕</button>
+  </div>
+  <div class="search-results-note" id="searchResultsNote"></div>
+
+  <div class="global-controls" id="checklistOnly2">
+    <button type="button" class="mini-btn" id="expandAllBtn">▼ <span data-es="EXPANDIR TODO" data-en="EXPAND ALL">EXPANDIR TODO</span></button>
+    <button type="button" class="mini-btn" id="collapseAllBtn">▶ <span data-es="COLAPSAR TODO" data-en="COLLAPSE ALL">COLAPSAR TODO</span></button>
+    <label class="toggle-chip">
+      <input type="checkbox" id="missingOnlyToggle">
+      <span data-es="Solo mostrar pendientes" data-en="Show missing only">Solo mostrar pendientes</span>
+    </label>
+  </div>
+
+  <div class="save-bar">
+    <button type="button" class="mini-btn wide" id="saveBtn">💾 GUARDAR PROGRESO</button>
+    <button type="button" class="mini-btn wide" id="loadBtn">📂 CARGAR PROGRESO</button>
+    <input type="file" id="loadInput" accept="application/json" class="hidden">
+    <span class="save-status" id="saveStatus"></span>
+  </div>
+  <div class="autosave-note" id="autosaveNote"></div>
+
+  <div class="dim-legend hidden" id="dimLegend"></div>
+
+  <div id="sections"></div>
+
+  <div id="layoutPanel">
+    <div class="cross-editor" id="crossEditor">
+      <span class="cross-editor-label" id="crossEditorLabel">Editando</span>
+      <img class="cross-editor-preview" id="crossEditorPreview" alt="">
+      <input type="text" id="crossEditorInput" list="crossItemsList" placeholder="Nombre del ítem…">
+      <datalist id="crossItemsList"></datalist>
+      <button type="button" class="mini-btn wide" id="crossSaveBtn" data-es="Guardar" data-en="Save">Guardar</button>
+      <button type="button" class="mini-btn wide" id="crossClearBtn" data-es="Borrar" data-en="Clear">Borrar</button>
+      <button type="button" class="mini-btn wide" id="crossCancelBtn" data-es="Cancelar" data-en="Cancel">Cancelar</button>
+    </div>
+
+    <div class="cross-toolbar">
+      <button type="button" class="mini-btn wide" id="crossResetBtn" data-es="🗑️ Vaciar Diseño" data-en="🗑️ Clear Layout">🗑️ Vaciar Diseño</button>
+    </div>
+
+    <div class="cross-viewport" id="crossViewport">
+      <div class="cross-viewport-hint" id="crossViewportHint" data-es="🖱️ arrastrar · rueda/pellizco = zoom" data-en="🖱️ drag · wheel/pinch = zoom">🖱️ arrastrar · rueda/pellizco = zoom</div>
+      <div class="cross-stage" id="crossStage">
+        <div class="cross-grid" id="crossGrid"></div>
+      </div>
+      <div class="cross-zoom-controls">
+        <button type="button" class="cross-zoom-btn" id="crossZoomIn" title="Zoom in">＋</button>
+        <div class="cross-zoom-pct" id="crossZoomPct">100%</div>
+        <button type="button" class="cross-zoom-btn" id="crossZoomOut" title="Zoom out">－</button>
+        <button type="button" class="cross-zoom-btn" id="crossZoomFit" title="Fit / Center">⤢</button>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footerNote">Guardado automático solo funciona al abrir este archivo directo en tu navegador (no en la vista previa de Claude.ai). Los botones de arriba siempre funcionan como respaldo manual.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
